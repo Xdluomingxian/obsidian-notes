@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "self-improving-agent": {
+      "version": "1.0.11",
+      "installedAt": 1772355969876
+    },
+    "imap-smtp-email": {
+      "version": "0.0.2",
+      "installedAt": 1772412274823
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1772669680987
+    }
+  }
+}

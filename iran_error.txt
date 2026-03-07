@@ -1,0 +1,18 @@
+TimeoutError: page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#kw')
+    - locator resolved to <input id="kw" value="" name="wd" class="s_ipt" maxlength="255" autocomplete="off" placeholder="2026元宵节祝福语"/>
+    - fill("伊朗最新局势 2026")
+  - attempting fill action
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and editable
+      - element is not visible
+    - retrying fill action
+      - waiting 100ms
+    37 × waiting for element to be visible, enabled and editable
+       - element is not visible
+     - retrying fill action
+       - waiting 500ms

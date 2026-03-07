@@ -1,0 +1,6 @@
+# Daily Journal Automation - OpenClaw AI Assistant
+# Run daily journal generation at 11:59 PM every day
+59 23 * * * /home/ubuntu/.openclaw/workspace/daily_journal.sh >> /home/ubuntu/.openclaw/workspace/logs/daily_journal.log 2>&1
+
+# Optional: Run also at 8:00 AM for morning sync
+# 0 8 * * * /home/ubuntu/.openclaw/workspace/daily_journal.sh >> /home/ubuntu/.openclaw/workspace/logs/daily_journal.log 2>&1
