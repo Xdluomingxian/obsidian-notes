@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#87CEEB"/>
+  
+  <!-- 地面 -->
+  <rect x="0" y="500" width="800" height="100" fill="#8B4513"/>
+  
+  <!-- 草地 -->
+  <rect x="0" y="480" width="800" height="40" fill="#228B22"/>
+  
+  <!-- 太阳 -->
+  <circle cx="700" cy="80" r="50" fill="#FFD700"/>
+  
+  <!-- 云朵 -->
+  <ellipse cx="150" cy="100" rx="60" ry="30" fill="#FFFFFF" opacity="0.8"/>
+  <ellipse cx="200" cy="110" rx="50" ry="25" fill="#FFFFFF" opacity="0.8"/>
+  <ellipse cx="400" cy="80" rx="70" ry="35" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- 骏马 - 身体 -->
+  <ellipse id="body" cx="400" cy="350" rx="120" ry="60" fill="#8B4513" stroke="#654321" stroke-width="3"/>
+  
+  <!-- 骏马 - 脖子 -->
+  <path id="neck" d="M 480 320 Q 520 280 540 240 L 560 250 Q 540 300 500 340 Z" fill="#8B4513" stroke="#654321" stroke-width="3"/>
+  
+  <!-- 骏马 - 头部 -->
+  <ellipse id="head" cx="560" cy="230" rx="50" ry="35" fill="#8B4513" stroke="#654521" stroke-width="3"/>
+  
+  <!-- 马嘴 -->
+  <ellipse cx="590" cy="240" rx="25" ry="15" fill="#654321"/>
+  
+  <!-- 眼睛 -->
+  <circle cx="570" cy="220" r="8" fill="#000000"/>
+  <circle cx="572" cy="218" r="3" fill="#FFFFFF"/>
+  
+  <!-- 耳朵 -->
+  <polygon points="540,210 550,180 560,210" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+  <polygon points="555,210 565,180 575,210" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+  
+  <!-- 鬃毛 -->
+  <path d="M 520 250 Q 500 220 510 200 Q 530 210 540 240" fill="#2F1B0C" stroke="#2F1B0C" stroke-width="8"/>
+  <path d="M 510 260 Q 490 230 500 210 Q 520 220 530 250" fill="#2F1B0C" stroke="#2F1B0C" stroke-width="8"/>
+  <path d="M 500 270 Q 480 240 490 220 Q 510 230 520 260" fill="#2F1B0C" stroke="#2F1B0C" stroke-width="8"/>
+  
+  <!-- 前腿 1 -->
+  <path id="front-leg-1" d="M 450 380 L 440 450 L 430 480" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- 前腿 2 -->
+  <path id="front-leg-2" d="M 470 380 L 480 460 L 490 490" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- 后腿 1 -->
+  <path id="back-leg-1" d="M 320 380 L 300 450 L 280 480" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- 后腿 2 -->
+  <path id="back-leg-2" d="M 340 380 L 350 460 L 360 490" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- 尾巴 -->
+  <path id="tail" d="M 280 360 Q 240 380 220 420 Q 200 400 190 440" fill="none" stroke="#2F1B0C" stroke-width="10" stroke-linecap="round"/>
+  
+  <!-- 马蹄 -->
+  <ellipse cx="430" cy="485" rx="12" ry="8" fill="#2F1B0C"/>
+  <ellipse cx="490" cy="495" rx="12" ry="8" fill="#2F1B0C"/>
+  <ellipse cx="280" cy="485" rx="12" ry="8" fill="#2F1B0C"/>
+  <ellipse cx="360" cy="495" rx="12" ry="8" fill="#2F1B0C"/>
+  
+  <!-- 动画效果线 - 速度线 -->
+  <line x1="100" y1="300" x2="200" y2="300" stroke="#FFFFFF" stroke-width="2" opacity="0.6">
+    <animate attributeName="x1" from="50" to="250" dur="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="x2" from="150" to="350" dur="0.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="80" y1="350" x2="180" y2="350" stroke="#FFFFFF" stroke-width="2" opacity="0.6">
+    <animate attributeName="x1" from="30" to="230" dur="0.7s" repeatCount="indefinite"/>
+    <animate attributeName="x2" from="130" to="330" dur="0.7s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- 尘土效果 -->
+  <circle cx="300" cy="510" r="5" fill="#8B4513" opacity="0.6">
+    <animate attributeName="cy" from="510" to="480" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="0.6" to="0" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="510" r="7" fill="#8B4513" opacity="0.6">
+    <animate attributeName="cy" from="510" to="470" dur="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="0.6" to="0" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="510" r="6" fill="#8B4513" opacity="0.6">
+    <animate attributeName="cy" from="510" to="490" dur="0.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="0.6" to="0" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- 骏马奔跑动画 -->
+  <g>
+    <!-- 身体上下起伏 -->
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -10; 0 0" dur="0.4s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- 腿部奔跑动画 -->
+  <g>
+    <!-- 前腿 1 动画 -->
+    <animateTransform xlink:href="#front-leg-1" attributeName="transform" type="rotate" values="0 450 380; -30 450 380; 0 450 380; 20 450 380; 0 450 380" dur="0.8s" repeatCount="indefinite"/>
+    <!-- 前腿 2 动画 -->
+    <animateTransform xlink:href="#front-leg-2" attributeName="transform" type="rotate" values="0 470 380; 25 470 380; 0 470 380; -25 470 380; 0 470 380" dur="0.8s" repeatCount="indefinite"/>
+    <!-- 后腿 1 动画 -->
+    <animateTransform xlink:href="#back-leg-1" attributeName="transform" type="rotate" values="0 320 380; -35 320 380; 0 320 380; 25 320 380; 0 320 380" dur="0.8s" repeatCount="indefinite"/>
+    <!-- 后腿 2 动画 -->
+    <animateTransform xlink:href="#back-leg-2" attributeName="transform" type="rotate" values="0 340 380; 30 340 380; 0 340 380; -30 340 380; 0 340 380" dur="0.8s" repeatCount="indefinite"/>
+    <!-- 尾巴摆动 -->
+    <animateTransform xlink:href="#tail" attributeName="transform" type="rotate" values="0 280 360; -15 280 360; 0 280 360; 15 280 360; 0 280 360" dur="0.6s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- 整体移动动画 -->
+  <animateTransform attributeName="transform" type="translate" values="0 0; -100 0; 0 0" dur="2s" repeatCount="indefinite"/>
+</svg>

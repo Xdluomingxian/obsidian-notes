@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#87CEEB"/>
+  <rect x="0" y="500" width="800" height="100" fill="#8B4513"/>
+  <rect x="0" y="480" width="800" height="40" fill="#228B22"/>
+  <circle cx="700" cy="80" r="50" fill="#FFD700"/>
+  
+  <!-- 进度文字 -->
+  <text x="400" y="50" font-family="Arial" font-size="24" font-weight="bold" fill="#2F4F4F" text-anchor="middle">
+    绘画进度：13%
+  </text>
+  
+  <!-- 骏马 - 根据进度显示不同部分 -->
+  <g transform="translate(0, 20)">
+    <!-- 身体 -->
+    <ellipse cx="400" cy="350" rx="120" ry="60" fill="#8B4513" stroke="#654321" stroke-width="3"/>
+  </g>
+</svg>

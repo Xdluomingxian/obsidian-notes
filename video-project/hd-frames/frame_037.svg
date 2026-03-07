@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2"/>
+      <stop offset="100%" style="stop-color:#87CEEB"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0522D"/>
+      <stop offset="100%" style="stop-color:#8B4513"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="url(#skyGrad)"/>
+  
+  <!-- 太阳 -->
+  <circle cx="1600" cy="150" r="80" fill="#FFD700"/>
+  <g stroke="#FFD700" stroke-width="4" opacity="0.6">
+    <line x1="1600" y1="50" x2="1600" y2="20"/>
+    <line x1="1600" y1="250" x2="1600" y2="280"/>
+    <line x1="1500" y1="150" x2="1470" y2="150"/>
+    <line x1="1700" y1="150" x2="1730" y2="150"/>
+  </g>
+  
+  <!-- 云朵 -->
+  <g fill="#FFFFFF" opacity="0.8">
+    <ellipse cx="300" cy="180" rx="120" ry="50"/>
+    <ellipse cx="380" cy="200" rx="100" ry="45"/>
+    <ellipse cx="800" cy="150" rx="140" ry="60"/>
+    <ellipse cx="1200" cy="180" rx="100" ry="45"/>
+  </g>
+  
+  <!-- 地面 -->
+  <rect x="0" y="850" width="1920" height="230" fill="#8B4513"/>
+  
+  <!-- 草地 -->
+  <rect x="0" y="820" width="1920" height="60" fill="#228B22"/>
+  
+  <!-- 标题 -->
+  <text x="960" y="80" font-family="Arial, Microsoft YaHei" font-size="42" font-weight="bold" fill="#2F4F4F" text-anchor="middle">🎨 绘画过程：奔跑的骏马</text>
+  
+  <!-- 进度条背景 -->
+  <rect x="460" y="100" width="1000" height="20" fill="#E0E0E0" rx="10"/>
+  <!-- 进度条 -->
+  <rect x="460" y="100" width="61*10" height="20" fill="#4CAF50" rx="10"/>
+  <text x="960" y="115" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">61%</text>
+  
+  <!-- 步骤提示 -->
+  <text x="960" y="145" font-family="Arial, Microsoft YaHei" font-size="24" fill="#9370DB" text-anchor="middle" font-weight="bold">步骤 7: 绘制前腿</text>
+  
+  <!-- 骏马绘制区域 -->
+  <g transform="translate(200, 150) scale(1.2)">
+    <!-- 身体 -->
+    <ellipse cx="400" cy="350" rx="120" ry="60" fill="url(#bodyGrad)" stroke="#654321" stroke-width="3"/>
+    <!-- 脖子 -->
+    <path d="M 480 320 Q 520 280 540 240 L 560 250 Q 540 300 500 340 Z" fill="url(#bodyGrad)" stroke="#654321" stroke-width="3"/>
+    <!-- 头部 -->
+    <ellipse cx="560" cy="230" rx="50" ry="35" fill="#8B4513" stroke="#654521" stroke-width="3"/>
+    <!-- 马嘴 -->
+    <ellipse cx="590" cy="240" rx="25" ry="15" fill="#654321"/>
+    <!-- 眼睛 -->
+    <circle cx="570" cy="220" r="8" fill="#000000"/>
+    <circle cx="572" cy="218" r="3" fill="#FFFFFF"/>
+    <!-- 耳朵 -->
+    <polygon points="540,210 550,180 560,210" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+    <polygon points="555,210 565,180 575,210" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+    <!-- 鬃毛 -->
+    <path d="M 520 250 Q 500 220 510 200 Q 530 210 540 240" fill="none" stroke="#2F1B0C" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 510 260 Q 490 230 500 210 Q 520 220 530 250" fill="none" stroke="#2F1B0C" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 500 270 Q 480 240 490 220 Q 510 230 520 260" fill="none" stroke="#2F1B0C" stroke-width="10" stroke-linecap="round"/>
+    <!-- 前腿 -->
+    <path d="M 450 380 L 440 460 L 430 500" fill="none" stroke="#8B4513" stroke-width="14" stroke-linecap="round"/>
+    <path d="M 470 380 L 480 470 L 490 510" fill="none" stroke="#8B4513" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  
+  <!-- 画笔图标 -->
+  <g transform="translate(1700, 950)">
+    <rect x="0" y="0" width="150" height="100" fill="#FFF8DC" stroke="#8B4513" stroke-width="3" rx="15"/>
+    <text x="75" y="65" font-family="Arial" font-size="60" text-anchor="middle">🖌️</text>
+  </g>
+</svg>

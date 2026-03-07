@@ -1,0 +1,65 @@
+<svg width="1080" height="1440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow2">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <rect width="1080" height="1440" fill="url(#bg2)"/>
+  
+  <!-- 标题 -->
+  <text x="540" y="150" font-size="64" fill="#fff" text-anchor="middle" font-family="sans-serif" font-weight="bold">
+    <tspan x="540" dy="0">你是</tspan>
+    <tspan x="540" dy="80" fill="#ffd700">主语</tspan>
+    <tspan x="540" dy="80">还是</tspan>
+    <tspan x="540" dy="80" fill="#ffd700">宾语</tspan>
+    <tspan x="540" dy="80">？</tspan>
+  </text>
+  
+  <!-- 分隔线 -->
+  <line x1="340" y1="400" x2="740" y2="400" stroke="#fff" stroke-width="3" opacity="0.5"/>
+  
+  <!-- 宾语部分 -->
+  <rect x="80" y="460" width="420" height="420" rx="20" fill="rgba(0,0,0,0.3)" filter="url(#shadow2)"/>
+  <text x="290" y="540" font-size="48" fill="#ff6b6b" text-anchor="middle" font-family="sans-serif" font-weight="bold">❌ 宾语</text>
+  <text x="290" y="610" font-size="32" fill="#fff" text-anchor="middle" font-family="sans-serif">执行指令的人</text>
+  
+  <text x="290" y="680" font-size="28" fill="#fff" text-anchor="middle" font-family="sans-serif" opacity="0.9">
+    <tspan x="290" dy="0">上学时：老师是主语</tspan>
+    <tspan x="290" dy="45">你是被灌输的宾语</tspan>
+    <tspan x="290" dy="60"/>
+    <tspan x="290" dy="45">上班后：老板是主语</tspan>
+    <tspan x="290" dy="45">你是被优化的宾语</tspan>
+  </text>
+  
+  <!-- 主语部分 -->
+  <rect x="580" y="460" width="420" height="420" rx="20" fill="rgba(255,255,255,0.2)" filter="url(#shadow2)"/>
+  <text x="790" y="540" font-size="48" fill="#51cf66" text-anchor="middle" font-family="sans-serif" font-weight="bold">✅ 主语</text>
+  <text x="790" y="610" font-size="32" fill="#fff" text-anchor="middle" font-family="sans-serif">发出指令的人</text>
+  
+  <text x="790" y="680" font-size="28" fill="#fff" text-anchor="middle" font-family="sans-serif" opacity="0.9">
+    <tspan x="790" dy="0">定义问题</tspan>
+    <tspan x="790" dy="45">整合资源</tspan>
+    <tspan x="790" dy="45">发出指令</tspan>
+    <tspan x="790" dy="45">掌控人生</tspan>
+  </text>
+  
+  <!-- 金句 -->
+  <rect x="80" y="940" width="920" height="280" rx="20" fill="rgba(255,255,255,0.15)" filter="url(#shadow2)"/>
+  <text x="540" y="1020" font-size="36" fill="#fff" text-anchor="middle" font-family="sans-serif" opacity="0.9">
+    <tspan x="540" dy="0">"Agency 就是你在人生的句子里</tspan>
+    <tspan x="540" dy="55">是做主语，还是做宾语"</tspan>
+  </text>
+  <text x="540" y="1160" font-size="28" fill="#ffd700" text-anchor="middle" font-family="sans-serif">— Dan Koe（油管大神）</text>
+  
+  <!-- 底部引导 -->
+  <text x="540" y="1350" font-size="36" fill="#fff" text-anchor="middle" font-family="sans-serif" opacity="0.8">👉 左滑看 AI 时代的生存法则</text>
+  
+  <!-- 装饰 -->
+  <circle cx="150" cy="1300" r="50" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="930" cy="1250" r="70" fill="rgba(255,255,255,0.08)"/>
+</svg>

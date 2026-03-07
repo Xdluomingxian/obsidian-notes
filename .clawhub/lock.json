@@ -12,6 +12,18 @@
     "agent-browser": {
       "version": "0.2.0",
       "installedAt": 1772669680987
+    },
+    "openclaw-aisa-llm-image-video": {
+      "version": "1.0.0",
+      "installedAt": 1772754884408
+    },
+    "svg-draw": {
+      "version": "1.0.0",
+      "installedAt": 1772772384901
+    },
+    "remotion-video-toolkit": {
+      "version": "1.4.0",
+      "installedAt": 1772772390282
     }
   }
 }

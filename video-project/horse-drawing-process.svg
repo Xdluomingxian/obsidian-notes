@@ -1,0 +1,295 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- 画笔笔触效果 -->
+    <filter id="brush-stroke">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    
+    <!-- 渐变 - 马身体颜色 -->
+    <linearGradient id="horse-body-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0522D"/>
+      <stop offset="100%" style="stop-color:#8B4513"/>
+    </linearGradient>
+    
+    <!-- 渐变 - 天空 -->
+    <linearGradient id="sky-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2"/>
+      <stop offset="100%" style="stop-color:#87CEEB"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2F4F4F" text-anchor="middle">🎨 绘画过程：奔跑的骏马</text>
+  
+  <!-- 背景 - 天空 -->
+  <rect id="bg-sky" x="0" y="0" width="800" height="500" fill="#FFFFFF" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="0.5s" fill="freeze"/>
+    <animate attributeName="fill" from="#FFFFFF" to="url(#sky-gradient)" dur="2s" begin="0.5s" fill="freeze"/>
+  </rect>
+  
+  <!-- 地面 -->
+  <rect id="ground" x="0" y="500" width="800" height="100" fill="#FFFFFF" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="1.5s" fill="freeze"/>
+    <animate attributeName="fill" from="#FFFFFF" to="#8B4513" dur="1.5s" begin="1.5s" fill="freeze"/>
+  </rect>
+  
+  <!-- 草地 -->
+  <rect id="grass" x="0" y="480" width="800" height="40" fill="#FFFFFF" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="2.5s" fill="freeze"/>
+    <animate attributeName="fill" from="#FFFFFF" to="#228B22" dur="1s" begin="2.5s" fill="freeze"/>
+  </rect>
+  
+  <!-- 太阳 -->
+  <circle id="sun" cx="700" cy="80" r="0" fill="#FFD700">
+    <animate attributeName="r" from="0" to="50" dur="2s" begin="3s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="3s" fill="freeze"/>
+  </circle>
+  
+  <!-- 太阳光芒 -->
+  <g id="sun-rays" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.6" dur="1s" begin="5s" fill="freeze"/>
+    <line x1="700" y1="30" x2="700" y2="10" stroke="#FFD700" stroke-width="3"/>
+    <line x1="700" y1="130" x2="700" y2="150" stroke="#FFD700" stroke-width="3"/>
+    <line x1="650" y1="80" x2="630" y2="80" stroke="#FFD700" stroke-width="3"/>
+    <line x1="750" y1="80" x2="770" y2="80" stroke="#FFD700" stroke-width="3"/>
+    <line x1="665" y1="45" x2="650" y2="30" stroke="#FFD700" stroke-width="3"/>
+    <line x1="735" y1="45" x2="750" y2="30" stroke="#FFD700" stroke-width="3"/>
+    <line x1="665" y1="115" x2="650" y2="130" stroke="#FFD700" stroke-width="3"/>
+    <line x1="735" y1="115" x2="750" y2="130" stroke="#FFD700" stroke-width="3"/>
+  </g>
+  
+  <!-- 云朵 1 -->
+  <g id="cloud1" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.8" dur="1.5s" begin="5.5s" fill="freeze"/>
+    <ellipse cx="150" cy="100" rx="0" ry="0" fill="#FFFFFF">
+      <animate attributeName="rx" from="0" to="60" dur="2s" begin="5.5s" fill="freeze"/>
+      <animate attributeName="ry" from="0" to="30" dur="2s" begin="5.5s" fill="freeze"/>
+    </ellipse>
+    <ellipse cx="200" cy="110" rx="0" ry="0" fill="#FFFFFF">
+      <animate attributeName="rx" from="0" to="50" dur="2s" begin="5.5s" fill="freeze"/>
+      <animate attributeName="ry" from="0" to="25" dur="2s" begin="5.5s" fill="freeze"/>
+    </ellipse>
+  </g>
+  
+  <!-- 云朵 2 -->
+  <g id="cloud2" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.8" dur="1.5s" begin="7s" fill="freeze"/>
+    <ellipse cx="400" cy="80" rx="0" ry="0" fill="#FFFFFF">
+      <animate attributeName="rx" from="0" to="70" dur="2s" begin="7s" fill="freeze"/>
+      <animate attributeName="ry" from="0" to="35" dur="2s" begin="7s" fill="freeze"/>
+    </ellipse>
+  </g>
+  
+  <!-- 步骤提示文字 -->
+  <text id="step-text" x="400" y="80" font-family="Arial, sans-serif" font-size="20" fill="#FF6347" text-anchor="middle" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="8.5s" fill="freeze"/>
+    <animate attributeName="fill" values="#FF6347;#4169E1;#32CD32;#FFD700;#FF1493;#00CED1;#FF4500;#9370DB" dur="8s" begin="8.5s" fill="freeze"/>
+  </text>
+  
+  <!-- 骏马绘制过程 -->
+  <g id="horse-drawing" transform="translate(0, 20)">
+    
+    <!-- 步骤 1: 身体轮廓 -->
+    <ellipse id="horse-body" cx="400" cy="350" rx="0" ry="0" fill="url(#horse-body-gradient)" stroke="#654321" stroke-width="3" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="8.5s" fill="freeze"/>
+      <animate attributeName="rx" from="0" to="120" dur="3s" begin="8.5s" fill="freeze"/>
+      <animate attributeName="ry" from="0" to="60" dur="3s" begin="8.5s" fill="freeze"/>
+    </ellipse>
+    <text x="400" y="520" font-family="Arial" font-size="16" fill="#FF6347" text-anchor="middle" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="8.5s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" dur="0.3s" begin="11.5s" fill="freeze"/>
+      步骤 1: 绘制身体
+    </text>
+    
+    <!-- 步骤 2: 脖子 -->
+    <path id="horse-neck" d="M 480 320 Q 520 280 540 240 L 560 250 Q 540 300 500 340 Z" fill="url(#horse-body-gradient)" stroke="#654321" stroke-width="3" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="12s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="scale" from="0 0" to="1 1" dur="2s" begin="12s" fill="freeze"/>
+    </path>
+    <text x="400" y="520" font-family="Arial" font-size="16" fill="#4169E1" text-anchor="middle" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="12s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" dur="0.3s" begin="14s" fill="freeze"/>
+      步骤 2: 绘制脖子
+    </text>
+    
+    <!-- 步骤 3: 头部 -->
+    <ellipse id="horse-head" cx="560" cy="230" rx="0" ry="0" fill="#8B4513" stroke="#654521" stroke-width="3" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="14.5s" fill="freeze"/>
+      <animate attributeName="rx" from="0" to="50" dur="2s" begin="14.5s" fill="freeze"/>
+      <animate attributeName="ry" from="0" to="35" dur="2s" begin="14.5s" fill="freeze"/>
+    </ellipse>
+    <text x="400" y="520" font-family="Arial" font-size="16" fill="#32CD32" text-anchor="middle" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="14.5s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" dur="0.3s" begin="16.5s" fill="freeze"/>
+      步骤 3: 绘制头部
+    </text>
+    
+    <!-- 步骤 4: 马嘴和眼睛 -->
+    <g id="horse-face" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="17s" fill="freeze"/>
+      <ellipse cx="590" cy="240" rx="0" ry="0" fill="#654321">
+        <animate attributeName="rx" from="0" to="25" dur="1.5s" begin="17s" fill="freeze"/>
+        <animate attributeName="ry" from="0" to="15" dur="1.5s" begin="17s" fill="freeze"/>
+      </ellipse>
+      <circle id="eye" cx="570" cy="220" r="0" fill="#000000">
+        <animate attributeName="r" from="0" to="8" dur="1s" begin="17s" fill="freeze"/>
+      </circle>
+      <circle cx="572" cy="218" r="0" fill="#FFFFFF">
+        <animate attributeName="r" from="0" to="3" dur="1s" begin="17s" fill="freeze"/>
+      </circle>
+    </g>
+    <text x="400" y="520" font-family="Arial" font-size="16" fill="#FFD700" text-anchor="middle" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="17s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" dur="0.3s" begin="18.5s" fill="freeze"/>
+      步骤 4: 绘制五官
+    </text>
+    
+    <!-- 步骤 5: 耳朵和鬃毛 -->
+    <g id="horse-ears-mane" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="19s" fill="freeze"/>
+      <!-- 耳朵 -->
+      <polygon points="540,210 550,180 560,210" fill="#8B4513" stroke="#654321" stroke-width="2">
+        <animateTransform attributeName="transform" type="scale" from="0 0" to="1 1" dur="1s" begin="19s" fill="freeze"/>
+      </polygon>
+      <polygon points="555,210 565,180 575,210" fill="#8B4513" stroke="#654321" stroke-width="2">
+        <animateTransform attributeName="transform" type="scale" from="0 0" to="1 1" dur="1s" begin="19s" fill="freeze"/>
+      </polygon>
+      <!-- 鬃毛 -->
+      <path d="M 520 250 Q 500 220 510 200 Q 530 210 540 240" fill="none" stroke="#2F1B0C" stroke-width="8" stroke-linecap="round" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="20s" fill="freeze"/>
+        <animate attributeName="stroke-dasharray" from="1000 0" to="0 1000" dur="2s" begin="20s" fill="freeze"/>
+      </path>
+      <path d="M 510 260 Q 490 230 500 210 Q 520 220 530 250" fill="none" stroke="#2F1B0C" stroke-width="8" stroke-linecap="round" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="20.5s" fill="freeze"/>
+        <animate attributeName="stroke-dasharray" from="1000 0" to="0 1000" dur="2s" begin="20.5s" fill="freeze"/>
+      </path>
+      <path d="M 500 270 Q 480 240 490 220 Q 510 230 520 260" fill="none" stroke="#2F1B0C" stroke-width="8" stroke-linecap="round" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="21s" fill="freeze"/>
+        <animate attributeName="stroke-dasharray" from="1000 0" to="0 1000" dur="2s" begin="21s" fill="freeze"/>
+      </path>
+    </g>
+    <text x="400" y="520" font-family="Arial" font-size="16" fill="#FF1493" text-anchor="middle" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="19s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" dur="0.3s" begin="23s" fill="freeze"/>
+      步骤 5: 绘制耳朵和鬃毛
+    </text>
+    
+    <!-- 步骤 6: 四条腿 -->
+    <g id="horse-legs" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="23.5s" fill="freeze"/>
+      <!-- 前腿 1 -->
+      <path id="leg-front-1" d="M 450 380 L 440 450 L 430 480" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round" stroke-dasharray="1000 0">
+        <animate attributeName="stroke-dasharray" from="1000 0" to="0 1000" dur="2s" begin="23.5s" fill="freeze"/>
+      </path>
+      <!-- 前腿 2 -->
+      <path id="leg-front-2" d="M 470 380 L 480 460 L 490 490" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round" stroke-dasharray="1000 0">
+        <animate attributeName="stroke-dasharray" from="1000 0" to="0 1000" dur="2s" begin="24s" fill="freeze"/>
+      </path>
+      <!-- 后腿 1 -->
+      <path id="leg-back-1" d="M 320 380 L 300 450 L 280 480" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round" stroke-dasharray="1000 0">
+        <animate attributeName="stroke-dasharray" from="1000 0" to="0 1000" dur="2s" begin="24.5s" fill="freeze"/>
+      </path>
+      <!-- 后腿 2 -->
+      <path id="leg-back-2" d="M 340 380 L 350 460 L 360 490" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round" stroke-dasharray="1000 0">
+        <animate attributeName="stroke-dasharray" from="1000 0" to="0 1000" dur="2s" begin="25s" fill="freeze"/>
+      </path>
+    </g>
+    <text x="400" y="520" font-family="Arial" font-size="16" fill="#00CED1" text-anchor="middle" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="23.5s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" dur="0.3s" begin="27s" fill="freeze"/>
+      步骤 6: 绘制四条腿
+    </text>
+    
+    <!-- 步骤 7: 马蹄 -->
+    <g id="horse-hooves" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="27.5s" fill="freeze"/>
+      <ellipse cx="430" cy="485" rx="0" ry="0" fill="#2F1B0C">
+        <animate attributeName="rx" from="0" to="12" dur="1s" begin="27.5s" fill="freeze"/>
+        <animate attributeName="ry" from="0" to="8" dur="1s" begin="27.5s" fill="freeze"/>
+      </ellipse>
+      <ellipse cx="490" cy="495" rx="0" ry="0" fill="#2F1B0C">
+        <animate attributeName="rx" from="0" to="12" dur="1s" begin="27.5s" fill="freeze"/>
+        <animate attributeName="ry" from="0" to="8" dur="1s" begin="27.5s" fill="freeze"/>
+      </ellipse>
+      <ellipse cx="280" cy="485" rx="0" ry="0" fill="#2F1B0C">
+        <animate attributeName="rx" from="0" to="12" dur="1s" begin="27.5s" fill="freeze"/>
+        <animate attributeName="ry" from="0" to="8" dur="1s" begin="27.5s" fill="freeze"/>
+      </ellipse>
+      <ellipse cx="360" cy="495" rx="0" ry="0" fill="#2F1B0C">
+        <animate attributeName="rx" from="0" to="12" dur="1s" begin="27.5s" fill="freeze"/>
+        <animate attributeName="ry" from="0" to="8" dur="1s" begin="27.5s" fill="freeze"/>
+      </ellipse>
+    </g>
+    <text x="400" y="520" font-family="Arial" font-size="16" fill="#FF4500" text-anchor="middle" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="27.5s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" dur="0.3s" begin="28.5s" fill="freeze"/>
+      步骤 7: 绘制马蹄
+    </text>
+    
+    <!-- 步骤 8: 尾巴 -->
+    <path id="horse-tail" d="M 280 360 Q 240 380 220 420 Q 200 400 190 440" fill="none" stroke="#2F1B0C" stroke-width="10" stroke-linecap="round" stroke-dasharray="1000 0" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="29s" fill="freeze"/>
+      <animate attributeName="stroke-dasharray" from="1000 0" to="0 1000" dur="2.5s" begin="29s" fill="freeze"/>
+    </path>
+    <text x="400" y="520" font-family="Arial" font-size="16" fill="#9370DB" text-anchor="middle" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="29s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" dur="0.3s" begin="31.5s" fill="freeze"/>
+      步骤 8: 绘制尾巴
+    </text>
+    
+  </g>
+  
+  <!-- 完成文字 -->
+  <g id="complete-text" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="32s" fill="freeze"/>
+    <text x="400" y="300" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FFD700" text-anchor="middle" stroke="#2F4F4F" stroke-width="2">
+      ✨ 完成！✨
+      <animate attributeName="y" values="300;290;300" dur="1s" begin="32s" repeatCount="indefinite"/>
+    </text>
+  </g>
+  
+  <!-- 奔跑动画效果线 -->
+  <g id="speed-lines" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="33s" fill="freeze"/>
+    <line x1="100" y1="300" x2="200" y2="300" stroke="#FFFFFF" stroke-width="2" opacity="0.6">
+      <animate attributeName="x1" from="50" to="250" dur="0.5s" begin="33s" repeatCount="indefinite"/>
+      <animate attributeName="x2" from="150" to="350" dur="0.5s" begin="33s" repeatCount="indefinite"/>
+    </line>
+    <line x1="80" y1="350" x2="180" y2="350" stroke="#FFFFFF" stroke-width="2" opacity="0.6">
+      <animate attributeName="x1" from="30" to="230" dur="0.7s" begin="33s" repeatCount="indefinite"/>
+      <animate attributeName="x2" from="130" to="330" dur="0.7s" begin="33s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- 尘土效果 -->
+  <g id="dust" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="33s" fill="freeze"/>
+    <circle cx="300" cy="510" r="5" fill="#8B4513" opacity="0.6">
+      <animate attributeName="cy" from="510" to="480" dur="1s" begin="33s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" from="0.6" to="0" dur="1s" begin="33s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="510" r="7" fill="#8B4513" opacity="0.6">
+      <animate attributeName="cy" from="510" to="470" dur="1.2s" begin="33s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" from="0.6" to="0" dur="1.2s" begin="33s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="510" r="6" fill="#8B4513" opacity="0.6">
+      <animate attributeName="cy" from="510" to="490" dur="0.8s" begin="33s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" from="0.6" to="0" dur="0.8s" begin="33s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- 最终骏马奔跑动画 -->
+  <g id="horse-running" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="33s" fill="freeze"/>
+    <!-- 身体上下起伏 -->
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -10; 0 0" dur="0.4s" begin="33s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- 画笔图标 -->
+  <g id="brush-icon" transform="translate(700, 500)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0s" fill="freeze"/>
+    <rect x="0" y="0" width="80" height="80" fill="#FFF8DC" stroke="#8B4513" stroke-width="2" rx="10"/>
+    <text x="40" y="50" font-family="Arial" font-size="40" text-anchor="middle">🖌️</text>
+  </g>
+</svg>

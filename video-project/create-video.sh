@@ -1,0 +1,135 @@
+#!/bin/bash
+# 生成绘画过程帧序列并制作视频
+
+OUTPUT_DIR="/home/ubuntu/.openclaw/workspace/video-project/frames"
+mkdir -p "$OUTPUT_DIR"
+
+# 生成 30 帧绘画过程
+for i in $(seq 1 30); do
+    progress=$((i * 100 / 30))
+    cat > "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << EOF
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#87CEEB"/>
+  <rect x="0" y="500" width="800" height="100" fill="#8B4513"/>
+  <rect x="0" y="480" width="800" height="40" fill="#228B22"/>
+  <circle cx="700" cy="80" r="50" fill="#FFD700"/>
+  
+  <!-- 进度文字 -->
+  <text x="400" y="50" font-family="Arial" font-size="24" font-weight="bold" fill="#2F4F4F" text-anchor="middle">
+    绘画进度：${progress}%
+  </text>
+  
+  <!-- 骏马 - 根据进度显示不同部分 -->
+  <g transform="translate(0, 20)">
+EOF
+
+    # 根据进度添加马的不同部分
+    if [ $i -ge 3 ]; then
+        cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+    <!-- 身体 -->
+    <ellipse cx="400" cy="350" rx="120" ry="60" fill="#8B4513" stroke="#654321" stroke-width="3"/>
+EOF
+    fi
+    
+    if [ $i -ge 6 ]; then
+        cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+    <!-- 脖子 -->
+    <path d="M 480 320 Q 520 280 540 240 L 560 250 Q 540 300 500 340 Z" fill="#8B4513" stroke="#654321" stroke-width="3"/>
+EOF
+    fi
+    
+    if [ $i -ge 9 ]; then
+        cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+    <!-- 头部 -->
+    <ellipse cx="560" cy="230" rx="50" ry="35" fill="#8B4513" stroke="#654521" stroke-width="3"/>
+EOF
+    fi
+    
+    if [ $i -ge 12 ]; then
+        cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+    <!-- 马嘴 -->
+    <ellipse cx="590" cy="240" rx="25" ry="15" fill="#654321"/>
+    <!-- 眼睛 -->
+    <circle cx="570" cy="220" r="8" fill="#000000"/>
+    <circle cx="572" cy="218" r="3" fill="#FFFFFF"/>
+EOF
+    fi
+    
+    if [ $i -ge 15 ]; then
+        cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+    <!-- 耳朵 -->
+    <polygon points="540,210 550,180 560,210" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+    <polygon points="555,210 565,180 575,210" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+EOF
+    fi
+    
+    if [ $i -ge 18 ]; then
+        cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+    <!-- 鬃毛 -->
+    <path d="M 520 250 Q 500 220 510 200 Q 530 210 540 240" fill="none" stroke="#2F1B0C" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 510 260 Q 490 230 500 210 Q 520 220 530 250" fill="none" stroke="#2F1B0C" stroke-width="8" stroke-linecap="round"/>
+EOF
+    fi
+    
+    if [ $i -ge 21 ]; then
+        cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+    <!-- 前腿 -->
+    <path d="M 450 380 L 440 450 L 430 480" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 470 380 L 480 460 L 490 490" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round"/>
+EOF
+    fi
+    
+    if [ $i -ge 24 ]; then
+        cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+    <!-- 后腿 -->
+    <path d="M 320 380 L 300 450 L 280 480" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 340 380 L 350 460 L 360 490" fill="none" stroke="#8B4513" stroke-width="12" stroke-linecap="round"/>
+EOF
+    fi
+    
+    if [ $i -ge 27 ]; then
+        cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+    <!-- 马蹄 -->
+    <ellipse cx="430" cy="485" rx="12" ry="8" fill="#2F1B0C"/>
+    <ellipse cx="490" cy="495" rx="12" ry="8" fill="#2F1B0C"/>
+    <ellipse cx="280" cy="485" rx="12" ry="8" fill="#2F1B0C"/>
+    <ellipse cx="360" cy="495" rx="12" ry="8" fill="#2F1B0C"/>
+EOF
+    fi
+    
+    if [ $i -ge 29 ]; then
+        cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+    <!-- 尾巴 -->
+    <path d="M 280 360 Q 240 380 220 420 Q 200 400 190 440" fill="none" stroke="#2F1B0C" stroke-width="10" stroke-linecap="round"/>
+EOF
+    fi
+    
+    if [ $i -ge 30 ]; then
+        cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+    <!-- 完成效果 -->
+    <text x="400" y="280" font-family="Arial" font-size="48" font-weight="bold" fill="#FFD700" text-anchor="middle" stroke="#2F4F4F" stroke-width="2">✨ 完成！✨</text>
+EOF
+    fi
+    
+    cat >> "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" << 'EOF'
+  </g>
+</svg>
+EOF
+done
+
+echo "帧生成完成！"
+
+# 将 SVG 转换为 PNG
+echo "转换 SVG 为 PNG..."
+for i in $(seq 1 30); do
+    rsvg-convert "$OUTPUT_DIR/frame_$(printf "%03d" $i).svg" -o "$OUTPUT_DIR/frame_$(printf "%03d" $i).png" -w 1920 -h 1080
+done
+
+echo "PNG 转换完成！"
+
+# 使用 FFmpeg 制作视频 (10fps, 3 秒视频)
+echo "制作视频..."
+ffmpeg -y -framerate 10 -i "$OUTPUT_DIR/frame_%03d.png" -c:v libx264 -pix_fmt yuv420p -vf "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2" "/home/ubuntu/.openclaw/workspace/video-project/horse-drawing-video.mp4"
+
+echo "视频制作完成！"

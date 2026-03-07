@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- 身体渐变 -->
+    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0522D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 肌肉高光渐变 -->
+    <radialGradient id="muscleHighlight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#D2691E;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- 鬃毛渐变 -->
+    <linearGradient id="maneGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A2511;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2F1B0C;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e8e8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 阴影滤镜 -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)" opacity="1"/>
+  
+  <!-- 地面阴影 -->
+  <ellipse cx="960" cy="850" rx="400" ry="40" fill="#000000" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.2" dur="2s" begin="15s" fill="freeze"/>
+  </ellipse>
+  
+  <!-- 标题 -->
+  <text x="960" y="60" font-family="Arial, Microsoft YaHei" font-size="36" font-weight="bold" fill="#2F4F4F" text-anchor="middle">🎨 绘画过程：写实骏马</text>
+  
+  <!-- 进度条 -->
+  <rect x="460" y="80" width="1000" height="16" fill="#E0E0E0" rx="8"/>
+  <rect x="460" y="80" width="850" height="16" fill="#4CAF50" rx="8"/>
+  <text x="960" y="94" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">85%</text>
+  
+  <!-- 步骤提示 -->
+  <text x="960" y="120" font-family="Arial, Microsoft YaHei" font-size="20" fill="#98D8C8" text-anchor="middle" font-weight="bold">步骤 11: 绘制后腿</text>
+  
+  <!-- 骏马绘制区域 (居中缩放) -->
+  <g transform="translate(360, 180) scale(1.1)">
+    <!-- 身体轮廓 -->
+    <path d="M 280 420 
+             Q 250 400 240 350 
+             Q 230 280 280 240 
+             Q 320 210 400 200 
+             Q 500 190 580 200 
+             Q 650 210 680 230 
+             Q 700 240 700 260 
+             Q 700 300 680 350 
+             Q 660 400 640 420 
+             Q 620 450 600 550 
+             Q 590 600 580 620 
+             Q 570 640 550 640 
+             Q 530 640 520 620 
+             Q 510 600 500 550 
+             Q 490 500 480 480 
+             Q 470 470 450 470 
+             Q 430 470 420 480 
+             Q 410 500 400 550 
+             Q 390 600 380 620 
+             Q 370 640 350 640 
+             Q 330 640 320 620 
+             Q 310 600 300 550 
+             Q 290 480 280 420 Z" 
+          fill="none" stroke="#8B4513" stroke-width="3" stroke-dasharray="5,5" opacity="0.6"/>
+    <!-- 身体主体 -->
+    <path d="M 280 420 
+             Q 250 400 240 350 
+             Q 230 280 280 240 
+             Q 320 210 400 200 
+             Q 500 190 580 200 
+             Q 650 210 680 230 
+             Q 700 240 700 260 
+             Q 700 300 680 350 
+             Q 660 400 640 420 
+             Q 620 450 600 550 
+             Q 590 600 580 620 
+             Q 570 640 550 640 
+             Q 530 640 520 620 
+             Q 510 600 500 550 
+             Q 490 500 480 480 
+             Q 470 470 450 470 
+             Q 430 470 420 480 
+             Q 410 500 400 550 
+             Q 390 600 380 620 
+             Q 370 640 350 640 
+             Q 330 640 320 620 
+             Q 310 600 300 550 
+             Q 290 480 280 420 Z" 
+          fill="url(#bodyGradient)" stroke="#654321" stroke-width="2"/>
+    
+    <!-- 肌肉高光 -->
+    <ellipse cx="420" cy="320" rx="80" ry="50" fill="url(#muscleHighlight)" opacity="0.4"/>
+    <ellipse cx="520" cy="300" rx="60" ry="40" fill="url(#muscleHighlight)" opacity="0.3"/>
+    <!-- 脖子 -->
+    <path d="M 580 200 
+             Q 620 180 650 160 
+             Q 680 140 700 130 
+             Q 720 120 740 120 
+             Q 750 120 750 130 
+             Q 750 150 740 180 
+             Q 730 220 710 260 
+             Q 700 280 680 300 
+             Q 660 320 640 330 
+             Q 620 340 600 340 
+             Q 580 340 570 330 
+             Q 560 320 560 300 
+             Q 560 280 570 260 
+             Q 580 240 580 220 
+             Q 580 210 580 200 Z" 
+          fill="url(#bodyGradient)" stroke="#654321" stroke-width="2"/>
+    <!-- 头部 -->
+    <ellipse cx="750" cy="130" rx="70" ry="50" fill="url(#bodyGradient)" stroke="#654321" stroke-width="2"/>
+    <!-- 额头渐变 -->
+    <ellipse cx="740" cy="120" rx="40" ry="30" fill="#A0522D" opacity="0.5"/>
+    <!-- 左耳 -->
+    <path d="M 720 90 L 715 60 L 730 85 Z" fill="#4A2511" stroke="#2F1B0C" stroke-width="1"/>
+    <!-- 右耳 -->
+    <path d="M 760 90 L 765 60 L 750 85 Z" fill="#4A2511" stroke="#2F1B0C" stroke-width="1"/>
+    <!-- 耳朵内部 -->
+    <path d="M 722 85 L 718 65 L 728 83 Z" fill="#8B7355" opacity="0.6"/>
+    <path d="M 758 85 L 762 65 L 752 83 Z" fill="#8B7355" opacity="0.6"/>
+    <!-- 嘴鼻部 -->
+    <ellipse cx="790" cy="140" rx="35" ry="25" fill="#c9a88c" stroke="#8B7355" stroke-width="1"/>
+    <!-- 鼻孔 -->
+    <ellipse cx="800" cy="135" rx="5" ry="8" fill="#1a1a1a" opacity="0.8"/>
+    <ellipse cx="810" cy="140" rx="5" ry="8" fill="#1a1a1a" opacity="0.8"/>
+    <!-- 嘴巴线条 -->
+    <path d="M 785 150 Q 795 155 805 150" fill="none" stroke="#654321" stroke-width="2"/>
+    <!-- 眼睛 -->
+    <ellipse cx="760" cy="115" rx="12" ry="10" fill="#1a1a1a"/>
+    <ellipse cx="762" cy="113" rx="5" ry="4" fill="#FFFFFF"/>
+    <ellipse cx="758" cy="118" rx="3" ry="2" fill="#4A2511" opacity="0.5"/>
+    <!-- 眼睑 -->
+    <path d="M 750 108 Q 760 105 770 108" fill="none" stroke="#4A2511" stroke-width="2"/>
+    <!-- 睫毛 -->
+    <line x1="765" y1="106" x2="768" y2="102" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="770" y1="108" x2="774" y2="105" stroke="#1a1a1a" stroke-width="1"/>
+    <!-- 鬃毛 -->
+    <path d="M 700 130 Q 680 150 670 180 Q 660 210 660 240" fill="none" stroke="url(#maneGradient)" stroke-width="15" stroke-linecap="round"/>
+    <path d="M 690 140 Q 670 160 660 190 Q 650 220 650 250" fill="none" stroke="url(#maneGradient)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 680 150 Q 660 170 650 200 Q 640 230 640 260" fill="none" stroke="url(#maneGradient)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 670 160 Q 650 180 640 210 Q 630 240 630 270" fill="none" stroke="url(#maneGradient)" stroke-width="8" stroke-linecap="round"/>
+    <!-- 胸部肌肉 -->
+    <path d="M 600 350 Q 620 380 630 420 Q 640 460 640 500" fill="none" stroke="#654321" stroke-width="2" opacity="0.5"/>
+    <ellipse cx="620" cy="400" rx="40" ry="60" fill="url(#muscleHighlight)" opacity="0.2"/>
+    <!-- 左前腿 -->
+    <path d="M 580 450 
+             Q 575 500 570 550 
+             Q 565 600 560 640 
+             Q 555 680 550 700" 
+          fill="none" stroke="url(#bodyGradient)" stroke-width="25" stroke-linecap="round"/>
+    
+    <!-- 右前腿 -->
+    <path d="M 620 450 
+             Q 625 500 630 550 
+             Q 635 600 640 640 
+             Q 645 680 650 700" 
+          fill="none" stroke="url(#bodyGradient)" stroke-width="25" stroke-linecap="round"/>
+    
+    <!-- 腿部肌肉线条 -->
+    <path d="M 575 500 Q 580 550 575 600" fill="none" stroke="#654321" stroke-width="2" opacity="0.4"/>
+    <path d="M 625 500 Q 620 550 625 600" fill="none" stroke="#654321" stroke-width="2" opacity="0.4"/>
+    <!-- 左后腿 -->
+    <path d="M 380 450 
+             Q 360 500 340 550 
+             Q 320 600 310 650 
+             Q 300 680 295 700" 
+          fill="none" stroke="url(#bodyGradient)" stroke-width="25" stroke-linecap="round"/>
+    
+    <!-- 右后腿 -->
+    <path d="M 420 450 
+             Q 440 500 460 550 
+             Q 480 600 490 650 
+             Q 500 680 505 700" 
+          fill="none" stroke="url(#bodyGradient)" stroke-width="25" stroke-linecap="round"/>
+    
+    <!-- 后腿肌肉线条 -->
+    <path d="M 370 480 Q 350 530 330 580" fill="none" stroke="#654321" stroke-width="2" opacity="0.4"/>
+    <path d="M 430 480 Q 450 530 470 580" fill="none" stroke="#654321" stroke-width="2" opacity="0.4"/>
+  </g>
+  
+  <!-- 画笔图标 -->
+  <g transform="translate(1720, 960)">
+    <rect x="0" y="0" width="140" height="90" fill="#FFF8DC" stroke="#8B4513" stroke-width="3" rx="12"/>
+    <text x="70" y="60" font-family="Arial" font-size="50" text-anchor="middle">🖌️</text>
+  </g>
+  
+  <!-- 参考图提示 -->
+  <text x="100" y="1050" font-family="Arial" font-size="14" fill="#999">参考：写实棕色骏马照片</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg width="1080" height="1440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow3">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <rect width="1080" height="1440" fill="url(#bg3)"/>
+  
+  <!-- 标题 -->
+  <text x="540" y="140" font-size="64" fill="#fff" text-anchor="middle" font-family="sans-serif" font-weight="bold">
+    <tspan x="540" dy="0">AI 时代的</tspan>
+    <tspan x="540" dy="80" fill="#ffd700">生存法则</tspan>
+  </text>
+  
+  <!-- 狐狸 vs 刺猬 -->
+  <rect x="80" y="240" width="920" height="260" rx="20" fill="rgba(255,255,255,0.15)" filter="url(#shadow3)"/>
+  <text x="540" y="310" font-size="40" fill="#fff" text-anchor="middle" font-family="sans-serif" font-weight="bold">🦊 狐狸 vs 🦔 刺猬</text>
+  <text x="540" y="370" font-size="30" fill="#fff" text-anchor="middle" font-family="sans-serif" opacity="0.9">
+    <tspan x="540" dy="0">刺猬：只知道一件大事 → AI 是超级刺猬</tspan>
+    <tspan x="540" dy="50">狐狸：知道很多事 → 能感知风向变化</tspan>
+  </text>
+  
+  <!-- 五大能力 -->
+  <text x="540" y="580" font-size="44" fill="#fff" text-anchor="middle" font-family="sans-serif" font-weight="bold">🔥 5 大不可替代能力</text>
+  
+  <!-- 能力 1 -->
+  <rect x="80" y="640" width="920" height="110" rx="15" fill="rgba(255,255,255,0.2)" filter="url(#shadow3)"/>
+  <text x="130" y="710" font-size="36" fill="#ffd700" font-family="sans-serif" font-weight="bold">1</text>
+  <text x="180" y="710" font-size="32" fill="#fff" font-family="sans-serif">计算与直觉</text>
+  <text x="180" y="750" font-size="24" fill="#fff" font-family="sans-serif" opacity="0.8">你的痛苦，就是你的壁垒</text>
+  
+  <!-- 能力 2 -->
+  <rect x="80" y="760" width="920" height="110" rx="15" fill="rgba(255,255,255,0.2)" filter="url(#shadow3)"/>
+  <text x="130" y="830" font-size="36" fill="#ffd700" font-family="sans-serif" font-weight="bold">2</text>
+  <text x="180" y="830" font-size="32" fill="#fff" font-family="sans-serif">转化能力</text>
+  <text x="180" y="870" font-size="24" fill="#fff" font-family="sans-serif" opacity="0.8">把 Idea 变成现实，搞定现实世界的复杂性</text>
+  
+  <!-- 能力 3 -->
+  <rect x="80" y="880" width="920" height="110" rx="15" fill="rgba(255,255,255,0.2)" filter="url(#shadow3)"/>
+  <text x="130" y="950" font-size="36" fill="#ffd700" font-family="sans-serif" font-weight="bold">3</text>
+  <text x="180" y="950" font-size="32" fill="#fff" font-family="sans-serif">变异与创新</text>
+  <text x="180" y="990" font-size="24" fill="#fff" font-family="sans-serif" opacity="0.8">非理性的跨界组合，带来真正的创新</text>
+  
+  <!-- 能力 4 -->
+  <rect x="80" y="1000" width="920" height="110" rx="15" fill="rgba(255,255,255,0.2)" filter="url(#shadow3)"/>
+  <text x="130" y="1070" font-size="36" fill="#ffd700" font-family="sans-serif" font-weight="bold">4</text>
+  <text x="180" y="1070" font-size="32" fill="#fff" font-family="sans-serif">选择与品味</text>
+  <text x="180" y="1110" font-size="24" fill="#fff" font-family="sans-serif" opacity="0.8">在 100 张 AI 图里挑出有灵魂的那张</text>
+  
+  <!-- 能力 5 -->
+  <rect x="80" y="1120" width="920" height="110" rx="15" fill="rgba(255,255,255,0.2)" filter="url(#shadow3)"/>
+  <text x="130" y="1190" font-size="36" fill="#ffd700" font-family="sans-serif" font-weight="bold">5</text>
+  <text x="180" y="1190" font-size="32" fill="#fff" font-family="sans-serif">注意力控制</text>
+  <text x="180" y="1230" font-size="24" fill="#fff" font-family="sans-serif" opacity="0.8">元技能中的元技能，新时代的超能力</text>
+  
+  <!-- 底部引导 -->
+  <text x="540" y="1350" font-size="36" fill="#fff" text-anchor="middle" font-family="sans-serif" opacity="0.8">👉 左滑看行动清单</text>
+  
+  <!-- 页码 -->
+  <text x="1000" y="1400" font-size="28" fill="#fff" text-anchor="middle" font-family="sans-serif" opacity="0.6">3/4</text>
+</svg>

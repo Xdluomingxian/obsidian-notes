@@ -1,0 +1,58 @@
+<svg width="1080" height="1440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow4">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <rect width="1080" height="1440" fill="url(#bg4)"/>
+  
+  <!-- 标题 -->
+  <text x="540" y="140" font-size="64" fill="#fff" text-anchor="middle" font-family="sans-serif" font-weight="bold">
+    <tspan x="540" dy="0">如何成为</tspan>
+    <tspan x="540" dy="80" fill="#333">高 Agency 个体</tspan>
+  </text>
+  
+  <!-- 行动 1 -->
+  <rect x="80" y="240" width="920" height="180" rx="20" fill="rgba(255,255,255,0.9)" filter="url(#shadow4)"/>
+  <text x="140" y="320" font-size="48" fill="#fa709a" font-family="sans-serif" font-weight="bold">01</text>
+  <text x="220" y="320" font-size="36" fill="#333" font-family="sans-serif" font-weight="bold">试着"无证驾驶"</text>
+  <text x="220" y="370" font-size="28" fill="#666" font-family="sans-serif">不需要别人的许可，立刻开启你的 Side Project</text>
+  
+  <!-- 行动 2 -->
+  <rect x="80" y="440" width="920" height="180" rx="20" fill="rgba(255,255,255,0.9)" filter="url(#shadow4)"/>
+  <text x="140" y="520" font-size="48" fill="#fa709a" font-family="sans-serif" font-weight="bold">02</text>
+  <text x="220" y="520" font-size="36" fill="#333" font-family="sans-serif" font-weight="bold">把失败当数据</text>
+  <text x="220" y="570" font-size="28" fill="#666" font-family="sans-serif">快速行动，快速失败，快速修正</text>
+  
+  <!-- 行动 3 -->
+  <rect x="80" y="660" width="920" height="180" rx="20" fill="rgba(255,255,255,0.9)" filter="url(#shadow4)"/>
+  <text x="140" y="740" font-size="48" fill="#fa709a" font-family="sans-serif" font-weight="bold">03</text>
+  <text x="220" y="740" font-size="36" fill="#333" font-family="sans-serif" font-weight="bold">建立数字分身</text>
+  <text x="220" y="790" font-size="28" fill="#666" font-family="sans-serif">公开思考，积累信任资产</text>
+  
+  <!-- 核心金句 -->
+  <rect x="80" y="880" width="920" height="320" rx="20" fill="rgba(51,51,51,0.9)" filter="url(#shadow4)"/>
+  <text x="540" y="960" font-size="40" fill="#ffd700" text-anchor="middle" font-family="sans-serif" font-weight="bold">💡 核心洞察</text>
+  <text x="540" y="1040" font-size="38" fill="#fff" text-anchor="middle" font-family="sans-serif">
+    <tspan x="540" dy="0">"在 AI 时代，最重要的</tspan>
+    <tspan x="540" dy="60">不是'你会什么'，</tspan>
+    <tspan x="540" dy="60">而是'你是谁'。"</tspan>
+  </text>
+  <text x="540" y="1170" font-size="30" fill="#fee140" text-anchor="middle" font-family="sans-serif">你的经历、痛苦、品味、愿景</text>
+  <text x="540" y="1220" font-size="30" fill="#fee140" text-anchor="middle" font-family="sans-serif">才是真正的护城河</text>
+  
+  <!-- 底部呼吁 -->
+  <text x="540" y="1350" font-size="42" fill="#333" text-anchor="middle" font-family="sans-serif" font-weight="bold">2026，做自己人生的主语 💪</text>
+  
+  <!-- 页码 -->
+  <text x="1000" y="1400" font-size="28" fill="#333" text-anchor="middle" font-family="sans-serif" opacity="0.6">4/4</text>
+  
+  <!-- 装饰 -->
+  <circle cx="150" cy="1300" r="60" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="930" cy="1250" r="80" fill="rgba(255,255,255,0.15)"/>
+</svg>

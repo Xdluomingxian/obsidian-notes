@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- 身体渐变 -->
+    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0522D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 肌肉高光渐变 -->
+    <radialGradient id="muscleHighlight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#D2691E;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- 鬃毛渐变 -->
+    <linearGradient id="maneGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A2511;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2F1B0C;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e8e8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 阴影滤镜 -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)" opacity="1"/>
+  
+  <!-- 地面阴影 -->
+  <ellipse cx="960" cy="850" rx="400" ry="40" fill="#000000" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.2" dur="2s" begin="5s" fill="freeze"/>
+  </ellipse>
+  
+  <!-- 标题 -->
+  <text x="960" y="60" font-family="Arial, Microsoft YaHei" font-size="36" font-weight="bold" fill="#2F4F4F" text-anchor="middle">🎨 绘画过程：写实骏马</text>
+  
+  <!-- 进度条 -->
+  <rect x="460" y="80" width="1000" height="16" fill="#E0E0E0" rx="8"/>
+  <rect x="460" y="80" width="20" height="16" fill="#4CAF50" rx="8"/>
+  <text x="960" y="94" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">2%</text>
+  
+  <!-- 步骤提示 -->
+  <text x="960" y="120" font-family="Arial, Microsoft YaHei" font-size="20" fill="#999999" text-anchor="middle" font-weight="bold">准备画布...</text>
+  
+  <!-- 骏马绘制区域 (居中缩放) -->
+  <g transform="translate(360, 180) scale(1.1)">
+  </g>
+  
+  <!-- 画笔图标 -->
+  <g transform="translate(1720, 960)">
+    <rect x="0" y="0" width="140" height="90" fill="#FFF8DC" stroke="#8B4513" stroke-width="3" rx="12"/>
+    <text x="70" y="60" font-family="Arial" font-size="50" text-anchor="middle">🖌️</text>
+  </g>
+  
+  <!-- 参考图提示 -->
+  <text x="100" y="1050" font-family="Arial" font-size="14" fill="#999">参考：写实棕色骏马照片</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#87CEEB"/>
+  <rect x="0" y="500" width="800" height="100" fill="#8B4513"/>
+  <rect x="0" y="480" width="800" height="40" fill="#228B22"/>
+  <circle cx="700" cy="80" r="50" fill="#FFD700"/>
+  
+  <!-- 进度文字 -->
+  <text x="400" y="50" font-family="Arial" font-size="24" font-weight="bold" fill="#2F4F4F" text-anchor="middle">
+    绘画进度：50%
+  </text>
+  
+  <!-- 骏马 - 根据进度显示不同部分 -->
+  <g transform="translate(0, 20)">
+    <!-- 身体 -->
+    <ellipse cx="400" cy="350" rx="120" ry="60" fill="#8B4513" stroke="#654321" stroke-width="3"/>
+    <!-- 脖子 -->
+    <path d="M 480 320 Q 520 280 540 240 L 560 250 Q 540 300 500 340 Z" fill="#8B4513" stroke="#654321" stroke-width="3"/>
+    <!-- 头部 -->
+    <ellipse cx="560" cy="230" rx="50" ry="35" fill="#8B4513" stroke="#654521" stroke-width="3"/>
+    <!-- 马嘴 -->
+    <ellipse cx="590" cy="240" rx="25" ry="15" fill="#654321"/>
+    <!-- 眼睛 -->
+    <circle cx="570" cy="220" r="8" fill="#000000"/>
+    <circle cx="572" cy="218" r="3" fill="#FFFFFF"/>
+    <!-- 耳朵 -->
+    <polygon points="540,210 550,180 560,210" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+    <polygon points="555,210 565,180 575,210" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg width="1080" height="1440" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <rect width="1080" height="1440" fill="url(#bg1)"/>
+  
+  <!-- 顶部标签 -->
+  <rect x="120" y="80" width="200" height="60" rx="30" fill="rgba(255,255,255,0.2)"/>
+  <text x="220" y="118" font-size="28" fill="#fff" text-anchor="middle" font-family="sans-serif">🔥 认知升级</text>
+  
+  <!-- 主标题 -->
+  <text x="540" y="280" font-size="72" fill="#fff" text-anchor="middle" font-family="sans-serif" font-weight="bold">
+    <tspan x="540" dy="0">未来 10 年</tspan>
+    <tspan x="540" dy="90">唯一让你幸免的</tspan>
+    <tspan x="540" dy="90" fill="#ffd700">顶级能力</tspan>
+  </text>
+  
+  <!-- 分隔线 -->
+  <line x1="340" y1="420" x2="740" y2="420" stroke="#fff" stroke-width="3" opacity="0.5"/>
+  
+  <!-- 核心概念 -->
+  <text x="540" y="520" font-size="48" fill="#fff" text-anchor="middle" font-family="sans-serif" opacity="0.9">这个能力叫做</text>
+  <text x="540" y="620" font-size="120" fill="#ffd700" text-anchor="middle" font-family="sans-serif" font-weight="bold">AGENCY</text>
+  
+  <!-- 解释 -->
+  <rect x="120" y="680" width="840" height="280" rx="20" fill="rgba(255,255,255,0.15)" filter="url(#shadow)"/>
+  <text x="540" y="750" font-size="42" fill="#fff" text-anchor="middle" font-family="sans-serif">中文翻译很生硬</text>
+  <text x="540" y="820" font-size="52" fill="#fff" text-anchor="middle" font-family="sans-serif" font-weight="bold">我们叫它</text>
+  <text x="540" y="900" font-size="64" fill="#ffd700" text-anchor="middle" font-family="sans-serif" font-weight="bold">「做主语的能力」</text>
+  
+  <!-- 底部引导 -->
+  <text x="540" y="1050" font-size="36" fill="#fff" text-anchor="middle" font-family="sans-serif" opacity="0.8">👉 左滑看更多</text>
+  
+  <!-- 装饰元素 -->
+  <circle cx="200" cy="1300" r="60" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="880" cy="1200" r="40" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="920" cy="1350" r="80" fill="rgba(255,255,255,0.08)"/>
+</svg>
